@@ -641,8 +641,8 @@ input:read-only {
             margin-left:15%;
         }
         #sideNav li {
-            line-height: 50px;
-            margin: 20px;
+            line-height: 40px;
+            margin: 25px;
             margin-bottom: 20px;
             margin-left: 20px;
             list-style: none;
@@ -712,13 +712,14 @@ input:read-only {
              align-items: center;
             text-align: center;
             justify-content: center;
-            margin-left:32%;
+            margin-left:22%;
         }
         .tabpack {
             display: block;
              align-items: center;
             text-align: center;
             justify-content: center;
+            width:250px;
         }   
         .row {
 		display: block;
@@ -741,7 +742,7 @@ input:read-only {
     position: relative;
 	}
     .col input{
-        margin-left:calc(100vw*(15/100));
+        margin-left:calc(100vw*(5   /100));
         width: 200px !important;
     }
 	.col p{
@@ -750,7 +751,7 @@ input:read-only {
 	}
 
     .colbtn {
-        margin-left:25%;
+        margin-left:5%;
         margin-bottom:1%;
 
     }
@@ -759,10 +760,10 @@ input:read-only {
         width:200px !important;
     }
     .move input{
-        margin-left:calc(-100vw*(2/100));
+        margin-left:-2%;
     }
     .move p{
-       margin-left:calc(-100vw*(5/100));
+       margin-left:0px;
     }
     .bmi {
         margin-top:50px;
@@ -772,6 +773,16 @@ input:read-only {
     }
       .timeline::after {
     left: 31px;
+  }
+  .titletext {
+      width:250px;
+  }
+  hr {
+      width:250px;
+  }
+  .centerrow {
+      padding:0;
+      margin-left:10%;
   }
 
 /* Full-width containers */
