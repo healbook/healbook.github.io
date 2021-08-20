@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+		/>
+		<link rel="stylesheet" href="dataTables.bootstrap5.min.css" />
+		<link rel="stylesheet" href="admindashboard.css" />
+		<title>Admin Notification</title>
+	</head>
+	<body>
+		<!-- top navigation bar -->
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+			<div class="container-fluid">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#sidebar"
+					aria-controls="offcanvasExample"
+				>
+					<span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+				</button>
+				<a
+					class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+					href="#"
+					style="font-size: 20px; letter-spacing: 3px"
+					>healbook</a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#topNavBar"
+					aria-controls="topNavBar"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="topNavBar">
+					<form class="d-flex ms-auto my-3 my-lg-0">
+						<div class="input-group">
+							<input
+								class="form-control search_section"
+								type="search"
+								placeholder="Search"
+								aria-label="Search"
+							/>
+							<button class="btn btn-primary" type="submit">
+								<i class="bi bi-search"></i>
+							</button>
+						</div>
+					</form>
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle ms-2 text-white"
+								href="#"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<i class="bi bi-person-fill"></i>
+							</a>
+							<ul
+								style="border-radius: 8px"
+								class="dropdown-menu dropdown-menu-end"
+							>
+								<li>
+									<a class="dropdown-item" href="admininfo.html">Information</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="adminsetting.html">Settings</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="susi.html">Log out</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- top navigation bar -->
+		<!-- offcanvas -->
+		<div
+			class="offcanvas offcanvas-start sidebar-nav bg-dark"
+			tabindex="-1"
+			id="sidebar"
+		>
+			<div class="offcanvas-body p-0">
+				<nav class="navbar-dark p-3">
+					<ul class="navbar-nav">
+						<li>
+							<div class="text-white small fw-bold text-uppercase px-3 mb-2">
+								Admin
+							</div>
+						</li>
+						<li>
+							<a
+								href="admindashboard.html"
+								style="border-radius: 10px"
+								class="nav-link px-3 active text-light"
+							>
+								<span class="me-2"><i class="bi bi-person-circle"></i></span>
+								<span>Dashboard</span>
+							</a>
+						</li>
+						<li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+						<li>
+							<div class="text-white small fw-bold text-uppercase px-3 mb-3">
+								Interface
+							</div>
+						</li>
+						<li>
+							<a
+								class="nav-link px-3 sidebar-link text-white"
+								data-bs-toggle="collapse"
+								href="#layouts"
+							>
+								<span class="me-2"><i class="bi bi-layout-split"></i></span>
+								<span>Management</span>
+								<span class="ms-auto">
+									<span class="right-icon">
+										<i class="bi bi-chevron-down"></i>
+									</span>
+								</span>
+							</a>
+							<div class="collapse" id="layouts">
+								<ul class="navbar-nav ps-3">
+									<li>
+										<a href="adminuser.html" class="nav-link px-3 text-white">
+											<span class="me-2"
+												><i class="bi bi-person-fill"></i
+											></span>
+											<span>Users</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="collapse" id="layouts">
+								<ul class="navbar-nav ps-3">
+									<li>
+										<a href="adminexpert.html" class="nav-link px-3 text-white">
+											<span class="me-2"
+												><i class="bi bi-people-fill"></i
+											></span>
+											<span>Experts</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="collapse" id="layouts">
+								<ul class="navbar-nav ps-3">
+									<li>
+										<a href="adminblog.html" class="nav-link px-3 text-white">
+											<span class="me-2"
+												><i class="bi bi-pencil-fill"></i
+											></span>
+											<span>Blogs</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+						<li>
+							<a
+								class="nav-link px-3 sidebar-link text-white"
+								data-bs-toggle="collapse"
+								href="#layouts"
+							>
+								<span class="me-2"><i class="bi bi-layout-split"></i></span>
+								<span>Others</span>
+								<span class="ms-auto">
+									<span class="right-icon">
+										<i class="bi bi-chevron-down"></i>
+									</span>
+								</span>
+							</a>
+							<div class="collapse" id="layouts">
+								<ul class="navbar-nav ps-3">
+									<li>
+										<a
+											href="adminnotification.html"
+											class="nav-link px-3 text-dark bg-light"
+											style="border-radius: 10px"
+										>
+											<span class="me-2"><i class="bi bi-bell-fill"></i></span>
+											<span>Notification</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- offcanvas -->
+		<main style="border-radius: 10px" class="mt-5 pt-3">
+			<div class="container-fluid p-4">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 class="mb-3">Notifications</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 mb-3">
+						<div
+							style="border-radius: 10px"
+							class="card bg-primary text-white h-100"
+						>
+							<div class="card-body py-5">6302</div>
+							<div class="card-footer d-flex">Daily Views</div>
+						</div>
+					</div>
+					<div class="col-md-3 mb-3">
+						<div
+							style="border-radius: 10px"
+							class="card bg-warning text-white h-100"
+						>
+							<div class="card-body py-5">1354</div>
+							<div class="card-footer d-flex">Customers</div>
+						</div>
+					</div>
+					<div class="col-md-3 mb-3">
+						<div
+							style="border-radius: 10px"
+							class="card bg-success text-white h-100"
+						>
+							<div class="card-body py-5">4562</div>
+							<div class="card-footer d-flex">Blogs</div>
+						</div>
+					</div>
+					<div class="col-md-3 mb-3">
+						<div
+							style="background: #f67c92; border-radius: 10px"
+							class="card text-white h-100"
+						>
+							<div class="card-body py-5">362</div>
+							<div class="card-footer d-flex">Doctor</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<div style="border-radius: 10px" class="card h-100">
+							<div style="background: #f67c92" class="card-header text-white">
+								<span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+								Total Views
+							</div>
+							<div class="card-body">
+								<canvas class="chart" width="400" height="200"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div style="border-radius: 10px" class="card h-100">
+							<div style="background: #f67c92" class="card-header text-white">
+								<span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+								Area Chart Example
+							</div>
+							<div class="card-body">
+								<canvas class="chart" width="400" height="200"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 mb-3">
+						<div style="border-radius: 10px" class="card">
+							<div style="background: #f67c92" class="text-white card-header">
+								<span><i class="bi bi-table me-2"></i></span> Notifications
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table
+										id="example"
+										class="table table-striped data-table"
+										style="width: 100%"
+									>
+										<thead>
+											<tr>
+												<th>About</th>
+												<th>Details</th>
+												<th>Time</th>
+												<th>Status</th>
+												<th>Option</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Expert</td>
+												<td><b>Alison Jr</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Alison Jr</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>User</td>
+												<td><b>Someone</b> post a hidden message</td>
+												<td>9:10 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>User</td>
+												<td><b>Someone</b> post a hidden message</td>
+												<td>9:05 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>User</td>
+												<td><b>Someone</b> post a hidden message</td>
+												<td>9:02 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>User</td>
+												<td><b>Someone</b> post a hidden message</td>
+												<td>9:01 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Thomson Edison</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Leonado David</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Justin Martin</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Marco Jr</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Jackson Vid</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Alex Dang</b> update a blog</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Bii Max</b> set a Appointment Schedule</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Expert</td>
+												<td><b>Tony Nguyen</b> like a post</td>
+												<td>9:00 AM 19/7/2021</td>
+												<td>Unread</td>
+												<td>
+													<div class="row p-1">
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-warning"
+															>
+																View
+															</button>
+														</div>
+														<div
+															class="col-md-6 p-1"
+															style="box-sizing: border-box"
+														>
+															<button
+																style="width: 100%"
+																class="btn btn-danger"
+															>
+																Remove
+															</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<th>About</th>
+												<th>Details</th>
+												<th>Time</th>
+												<th>Status</th>
+												<th>Option</th>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+		<script src="./js/jquery-3.5.1.js"></script>
+		<script src="./js/jquery.dataTables.min.js"></script>
+		<script src="./js/dataTables.bootstrap5.min.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

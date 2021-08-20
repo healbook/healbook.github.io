@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-family: 'Poppins', sans-serif;;
+    }
+
+    span {
+        color: var(--mainColor);
+    }
+
+    :root {
+        --mainColor: #F67C92;
+        --snowColor: #F5F5F5;
+        --borderColor: #A9A9A9;
+    }
+
+    hr{
+		height: 2px;
+		background-color: #F67C92;
+		border: none;
+    }
+
+
+ /* nav */
+ #sideNav {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--mainColor);
+    top: 0;
+    right: -250px;
+    position: fixed;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+#sideNav li {
+    line-height: 30px;
+    margin: 80px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    list-style: none;
+    padding: 0 15px;
+}
+
+#sideNav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+#sideNav li:hover {
+    font-weight: bolder;
+}
+
+#Home {
+    font-weight: bolder;
+    border-left: 5px solid black;
+}
+
+#checkboxMenu {
+    width: 25px;
+    height: 25px;
+    top: 35px;
+    right: 35px;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#checkboxMenu:checked~.menu-icon .menu-line::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+#checkboxMenu:checked~.menu-icon .menu-line::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+#checkboxMenu:checked~.menu-icon .menu-line {
+    transform: rotate(135deg);
+    transition: 0.3s;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 25px;
+    top: 35px;
+    right: 35px;
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.menu-line {
+    height: 4px;
+    width: 100%;
+    position: relative;
+    background: black;
+}
+
+.menu-line::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: black;
+    top: -8px;
+}
+
+.menu-line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: black;
+    top: 8px;
+}
+
+
+
+/* social-icons */
+.social-icons {
+    width: 50px;
+    position: fixed;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.social-icons {
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 7;
+}
+
+.social-icons i {
+    display: block;
+    width: 20px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#facebook:hover {
+    color: #3b5998;
+}
+
+#instagram:hover {
+    color: #d6249f;
+}
+
+#twitter:hover {
+    color: #1da1f2;
+}
+
+#linked-in:hover {
+    color: #0077b5;
+}
+
+#google:hover {
+    color: #dd4b39;
+}
+
+
+/* footer */
+.footerContainer {
+    padding: 30px 120px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--snowColor);
+    display: flex;
+}
+
+.leftFooter, .rightFooter {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.language, .emailFooter {
+    flex-basis: 48%;
+    margin: 2%;
+    text-align: center;
+}
+
+.explore, .support, .aboutus, .experts {
+    flex-basis: 23%;
+    margin: 2%;
+}
+
+.headingFooter {
+    font-weight: bolder;
+    color: var(--mainColor);
+    font-size: 25px;
+}
+
+.textFooter {
+    font-size: 16px;
+    color: #888;
+}
+
+.languageBtn {
+    width: 150px;
+    height: 60px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    margin-left: 40%;
+    border: 2px solid var(--mainColor);
+    font-size: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.languageBtn:hover {
+    color: var(--mainColor);
+    background-color: transparent;
+}
+
+#engBtn {
+    background-color: var(--mainColor);
+    text-decoration: underline;
+    color: white;
+    outline: 1;
+    border: 2px solid var(--mainColor);
+}
+
+#engBtn:hover {
+    background-color: transparent;
+    color: var(--mainColor);
+}
+
+.iconScroll {
+    width: 25px;
+    height: 25px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#scroll {
+    text-decoration: none;
+    color: black;
+}
+    
+
+
+/* header */
+    #header {
+        height: 100%;
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        background-image: url(images/doctorin4.jpg); 
+    }
+
+
+/* bodypage */
+    #bodypage {margin-left: 10%; margin-right: 10%;margin-bottom: 30%;}
+
+    .avatar {height: 40%; width: 18%; background-image: url(images/doctorin4avatar.png);background-position: center;
+        background-repeat: none;
+        background-size: cover; border-radius: 10px; border: 2px solid black; float: left; margin-right: 6%;}
+    
+    .basicin4 {width: 34%; height: fit-content; margin-right: 4%; float: left;}
+    .property {width: 40%; float: left; font-weight: bolder;}
+    .value {width : 55%; float: left;}
+
+    .lichhomnay {width: 35%; height: fit-content; border-radius: 10px; border: 1px solid black; float: left;margin-right: 0; padding: 1%;}
+    .hour {width: 30%; float: left; font-weight: bolder;}
+    .people {width : 30%; float: left;}
+    .problem {width: 39%; float: left; color: var(--mainColor);}
+
+    #linklichhen {
+        text-decoration: none;
+        width: 100%;
+        margin: auto;
+        color: blue;
+    }
+    #linklichhen:hover {
+        color: var(--mainColor);
+    }
+
+/* mobile */
+@media only screen and (max-width: 1200px) {
+    #sideNav li {
+        line-height: 50px;
+        margin: 50px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        list-style: none;
+        padding: 0 15px;
+    }
+
+    #header{
+        background-image: none;
+        height: 50%;
+    }
+
+    .container {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+
+    #menuBtn {
+        width: 40px;
+        right: 50px;
+    }
+
+    .footerContainer {
+        padding: 30px;
+        display: block;
+    }
+    
+    .leftFooter, .rightFooter {
+        display: block;
+        text-align: center;
+    }
+    
+    .explore, .support, .aboutus, .experts {
+        margin-bottom: 30px;
+    }
+
+    .language {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .languageBtn {
+        margin: 5px;
+    }
+
+    .social-icons i {
+        font-size: 15px;
+    }
+    #checkboxMenu {
+        right: 25px;
+    }
+    .menu-icon {
+        right: 25px;
+    }
+
+    /* qhai */
+    .avatar {height: 60%; width: 100%;}
+
+    .basicin4, .lichhomnay {width: 100%; height: fit-content; margin-top: 10%; margin-bottom: 30%;}
+
+    .property, .value {width: 45%;}
+
+    #header {
+        background-image: url(images/doctorin4m.jpg); 
+    }
+}
