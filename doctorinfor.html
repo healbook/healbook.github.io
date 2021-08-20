@@ -150,11 +150,6 @@
         </div>
     </section>
 
-
-<!-- scroll -->
-    <a href="#header" id="scroll"><i class="fas fa-arrow-alt-circle-up fa-2x iconScroll"></i></a>
-
-
 <!-- social icon -->
     <div class="social-icons">
         <i class="fab fa-facebook-f" id="facebook"></i>
@@ -166,12 +161,15 @@
 
 <!-- nav -->
     <div id="sideNav">
+        <a class="imga" href="doctorinfor.html"><img src="images/doctorin4avatar.png" alt=""></a>
+        <p class="imgp">Dr. Alison</p>
         <li><a href="index.html">Home</a></li>
         <li><a href="susi.html">Sign in</a></li>
         <li><a href="blog.html">Blogs</a></li>
         <li id="Home"><a href="experts.html">Experts</a></li>
         <li><a href="exdiet.html">Exercises</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" style="color:white;"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
     </div>
 
     <input type="checkbox" id="checkboxMenu">
@@ -192,33 +190,13 @@
             }
         }
     </script>
+
     <!-- Messenger Chat plugin Code -->
-		<div id="fb-root"></div>
+    <div id="fb-root"></div>
 
-		<!-- Your Chat plugin code -->
-		<div id="fb-customer-chat" class="fb-customerchat"></div>
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-		<script>
-			var chatbox = document.getElementById("fb-customer-chat");
-			chatbox.setAttribute("page_id", "107503611647668");
-			chatbox.setAttribute("attribution", "biz_inbox");
-
-			window.fbAsyncInit = function () {
-				FB.init({
-					xfbml: true,
-					version: "v11.0",
-				});
-			};
-
-			(function (d, s, id) {
-				var js,
-					fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			})(document, "script", "facebook-jssdk");
-		</script>
 </body>
 </html>

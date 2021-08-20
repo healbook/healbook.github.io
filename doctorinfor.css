@@ -38,13 +38,26 @@
 
 #sideNav li {
     line-height: 30px;
-    margin: 80px;
+    margin: 50px;
     margin-bottom: 50px;
     margin-left: 20px;
     list-style: none;
     padding: 0 15px;
 }
-
+.imga img{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width:70px;
+    margin-left:30%;
+    margin-top:10%;
+    border-radius: 50%;
+    border:2px solid white;
+}
+.imgp {
+    text-align: center;
+    margin-right:8%;
+}
 #sideNav li a {
     text-decoration: none;
     color: black;
@@ -126,6 +139,7 @@
     background: black;
     top: 8px;
 }
+
 
 
 
